@@ -40,7 +40,6 @@ def form():
 
 @app.route('/jobs', methods = ['GET', 'POST'])
 def jobs():
-
     education_level = request.form.get("education")
     user_input = np.array([[
     1 if education_level == "highschool" else 0,
@@ -64,10 +63,10 @@ def jobs():
     df = pd.read_csv("jobs.csv")
     X = df.drop(columns=["O*NET-SOC Code", "Title"])
     y = df["Title"]
-    knn = KNeighborsClassifier(n_neighbors=5)
+    knn = KNeighborsClassifier(n_neighbors=6)
     knn.fit(X,y)
     user_df = pd.DataFrame(user_input, columns=X.columns)
-    jobs = y.iloc[knn.kneighbors(user_df)[1][0]].tolist()
+    jobs = y.iloc[knn.kneighbors(user_df)[1][0]].tolist()[:5]
 
     # Convert distances to percentage match scores for data visualization
     distances, indices = knn.kneighbors(user_df)
