@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<p><b> Hello, {{ placeholder }}!</b></p> 
+<p>Let's get started with finding what qualifications, values, and interests you have in order to find careers best suited to you!</p>
+
+<form action="/jobs" method="POST", class="form-box">
+    <p><b>Which of the following best represents your education level?</b></p>
+        <label>Choose one: </label>
+        <select name="education" id="education">
+            <option value="highschool">High School</option>
+            <option value="associates">Some College</option>
+            <option value="bachelors">Bachelors</option>
+            <option value="postgrad">Post Graduate</option>
+        </select>
+
+    <p><b>Rate which values you seek in a job with a decimal number from 0 to 1:</b></p>
+        <label>Achievement: <input type="number" name="achievement" min="0" max="1" step="0.01" value="0"></label><br>
+        <label>Independence: <input type="number" name="independence" min="0" max="1" step="0.01" value="0"></label><br>
+        <label>Recognition: <input type="number" name="recognition" min="0" max="1" step="0.01" value="0"></label><br>
+        <label>Relationships: <input type="number" name="relationships" min="0" max="1" step="0.01" value="0"></label><br>
+        <label>Support: <input type="number" name="support" min="0" max="1" step="0.01" value="0"></label><br>
+        <label>Working Conditions: <input type="number" name="working_conditions" min="0" max="1" step="0.01" value="0"></label><br>
+
+    <p><b>Rate which interests align with what you want in a job with a decimal number from 0 to 1:</b></p>
+        <label>Artistic Aspect: <input type="number" name="artistic_aspect" min="0" max="1" step="0.01" value="0"></label><br>
+        <label>Conventional Aspect: <input type="number" name="conventional_aspect" min="0" max="1" step="0.01" value="0"></label><br>
+        <label>Enterprising Aspect: <input type="number" name="enterprising_aspect" min="0" max="1" step="0.01" value="0"></label><br>
+        <label>Investigative Aspect: <input type="number" name="investigative_aspect" min="0" max="1" step="0.01" value="0"></label><br>
+        <label>Realistic Aspect: <input type="number" name="realistic_aspect" min="0" max="1" step="0.01" value="0"></label><br>
+        <label>Social Aspect: <input type="number" name="social_aspect" min="0" max="1" step="0.01" value="0"></label><br><br>
+
+    <input class="button" type="submit" value="See Your Results"><br><br>
+</form>
+
+{% endblock %}
+
+

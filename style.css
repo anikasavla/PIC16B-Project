@@ -1,0 +1,121 @@
+h1 {
+    font-weight: 900;
+    font-family: "Poppins", sans-serif;
+    font-size: 35px;
+    letter-spacing: 0.5px;
+    color: #333338;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    color: #333338;
+    background-color: #fafbfc;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+form input[type="number"], select {
+    border-radius: 25px;
+    border: 1px solid #ddd;
+    padding: 6px 12px;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+form input[type="number"]:focus, select:focus {
+    outline: none;
+    border-color: #6a11cb;
+}
+
+
+.form-box {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 50px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    max-width: 550px;
+    margin: 0 auto;
+
+}
+
+.button {
+    background-color: #6a11cb;
+    background-image: linear-gradient(to right, #6a11cb, #b02afe);
+    color: white;
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 25px;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease-in-out;
+    border: none;
+}
+
+.button:hover {
+    background-image: linear-gradient(to right, #b02afe, #6a11cb);
+    transform: scale(1.05);
+}
+
+.list {
+    text-align: left;
+}
+
+.tooltip-container {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.tooltip-text {
+    visibility: hidden;
+    border-style: solid;
+    width: 500px;
+    background-color: white;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+    border-color: black;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 105%;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip-container:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+.dotted-gradient {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30vh;
+    pointer-events: none; 
+    z-index: -11;
+
+    background: radial-gradient(circle, rgba(106, 17, 203, 0.5) 10%, transparent 3px) repeat;
+    background-size: 15px 15px;
+    
+
+    mask-image: linear-gradient(to top, rgba(0,0,0,0.3), rgba(0,0,0,0));
+    -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,0.3), rgba(0,0,0,0));
+    pointer-events: none;
+}
+
+footer {
+  position: fixed;
+  background-color: #fafbfc;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  z-index: 10;
+}
+
+
