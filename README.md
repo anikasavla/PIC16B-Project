@@ -1,8 +1,11 @@
+### Career Recommendation Service
+
 This project revolves around creating a career recommendation platform for users. We began by working with data from the O*NET SOC database; the various csv files within this repository were collected from the database and further wrangled within the project.ipynb file. In order to work with this project, only the "website" folder is necessary. After dowloading the folder, you can run the following commands in your terminal to launch our website:
 
+```
 cd website
-
 python3 app.py
+```
 
 It will create a Flask server link (such as http://127.0.0.1:5000) which you can copy and paste into a browser to interact with our project. We recommend running this in a virtual environment, and putting the Flask link into an Incognito tab. 
 
